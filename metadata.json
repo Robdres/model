@@ -1,0 +1,514 @@
+{
+  "column_mappings": {
+    "marca temporal": {
+      "new_name": "timestamp",
+      "type": "datetime",
+      "categories": null
+    },
+    "codigo paciente": {
+      "new_name": "patient_code",
+      "type": "string",
+      "categories": null
+    },
+    "sexo\nmasculino = 1\nfemenino = 0,85": {
+      "new_name": "gender",
+      "type": "categorical",
+      "categories": {
+        "1": "masculino",
+        "0.85": "femenino"
+      }
+    },
+    " edad\n (años)": {
+      "new_name": "age_years",
+      "type": "numeric",
+      "categories": null
+    },
+    "escolaridad:": {
+      "new_name": "education_level",
+      "type": "string",
+      "categories": null
+    },
+    "alimentacion (con que frecuencia come frutas, verduras, y hortalizas)\ndirario (0)\neventual (1)": {
+      "new_name": "diet_frequency",
+      "type": "categorical",
+      "categories": {
+        "0": "diario",
+        "1": "eventual"
+      }
+    },
+    "ejercicio \n(al menos 30 minutos diarios?)\nsi (0)\nno (2)\n": {
+      "new_name": "exercise_30min_daily",
+      "type": "categorical",
+      "categories": {
+        "0": "si",
+        "2": "no"
+      }
+    },
+    "fuma cigarrillo, puros o pipas\n0. no fuma\n1. fumador pasivo\n2. exfumador (dejo de fumar hace 6 meses)\n3. fumador (al menos 1 en los últimos 6 meses)": {
+      "new_name": "smoking_status",
+      "type": "categorical",
+      "categories": {
+        "0": "no fuma",
+        "1": "fumador pasivo",
+        "2": "exfumador (dejo hace 6 meses)",
+        "3": "fumador (al menos 1 en 6 meses)"
+      }
+    },
+    "ingiere alcohol\n1. si\n0. no": {
+      "new_name": "alcohol_consumption",
+      "type": "categorical",
+      "categories": {
+        "0": "no",
+        "1": "si"
+      }
+    },
+    "consume otras sustancias estupefacientes\n1. si\n0. no": {
+      "new_name": "drug_consumption",
+      "type": "categorical",
+      "categories": {
+        "0": "no",
+        "1": "si"
+      }
+    },
+    "antecedentes familiares de\ndiabetes (z833)\nno (0)\nabuelos, tios, primos hermanos (2)\npapas, hermanos o hijos (5)\n": {
+      "new_name": "family_history_diabetes",
+      "type": "categorical",
+      "categories": {
+        "0": "no",
+        "2": "abuelos, tios, primos hermanos",
+        "5": "papas, hermanos o hijos"
+      }
+    },
+    "antecedentes familiares de\npatologia tiroidea\n\n1. si\n0. no": {
+      "new_name": "family_history_thyroid",
+      "type": "categorical",
+      "categories": {
+        "0": "no",
+        "1": "si"
+      }
+    },
+    "antecedentes familiares de\npatologia  cardiaca\no hipertension\n\n1. si\n0. no": {
+      "new_name": "family_history_cardiac_hypertension",
+      "type": "categorical",
+      "categories": {
+        "0": "no",
+        "1": "si"
+      }
+    },
+    "familiares\ncon\nsobrepeso u obesidad\n\n1. si\n0. no": {
+      "new_name": "family_history_overweight_obesity",
+      "type": "categorical",
+      "categories": {
+        "0": "no",
+        "1": "si"
+      }
+    },
+    "familiares\ncon\ncancer\n\n1. si\n0. no": {
+      "new_name": "family_history_cancer",
+      "type": "categorical",
+      "categories": {
+        "0": "no",
+        "1": "si"
+      }
+    },
+    "otros\nantecedentes familiares\n\n1. si\n0. no": {
+      "new_name": "other_family_history",
+      "type": "categorical",
+      "categories": {
+        "0": "no",
+        "1": "si"
+      }
+    },
+    "peso": {
+      "new_name": "weight_kg",
+      "type": "numeric",
+      "categories": null
+    },
+    "talla": {
+      "new_name": "height_cm",
+      "type": "numeric",
+      "categories": null
+    },
+    "imc\nnormal: 20-24 (0)\nsobrepeso 25-29 (1)\nobesidad > 30 (2)": {
+      "new_name": "bmi_category",
+      "type": "categorical",
+      "categories": {
+        "0": "normal (20-24)",
+        "1": "sobrepeso (25-29)",
+        "2": "obesidad (>30)"
+      }
+    },
+    "perimetro abdominal:\nhombres:\n< 94 cm (0)\n94-102 cm (3)\n> 102 cm (4)\nmujeres:\n< 80 cm (0)\n80-88 cm (3)\n> 88 cm (4)": {
+      "new_name": "abdominal_perimeter",
+      "type": "categorical",
+      "categories": {
+        "0": "normal (H:<94cm, M:<80cm)",
+        "3": "moderado (H:94-102cm, M:80-88cm)",
+        "4": "alto (H:>102cm, M:>88cm)"
+      }
+    },
+    "presion sanguinea\n> 130/>85mmhg o\nhipertensión en tratamiento \nsi (1)\nno (0)": {
+      "new_name": "blood_pressure_high",
+      "type": "categorical",
+      "categories": {
+        "0": "no",
+        "1": "si (>130/85 o en tratamiento)"
+      }
+    },
+    "enfermedades inflamatorias:\npsoriasis\nlupus eritematoso sistemico\nhiv\nneoplasias\n\nsi (1)\nno (0)": {
+      "new_name": "inflammatory_diseases",
+      "type": "categorical",
+      "categories": {
+        "0": "no",
+        "1": "si (psoriasis, lupus, hiv, neoplasias)"
+      }
+    },
+    "mujer\nhta en el embarazo\ndiabetes gestacional sindrome de ovario poliquistico\nmenopausea\ntratamiento hormonal.\n\nsi (1)\nno (0)": {
+      "new_name": "female_specific_conditions",
+      "type": "categorical",
+      "categories": {
+        "0": "no",
+        "1": "si (hta embarazo, diabetes gestacional, SOP, menopausia, tto hormonal)"
+      }
+    },
+    "antecedentes patologicos personales de\nhipotiroidismo (e039)\n\nsi (1)\nno (0)\n": {
+      "new_name": "personal_history_hypothyroidism",
+      "type": "categorical",
+      "categories": {
+        "0": "no",
+        "1": "si"
+      }
+    },
+    "antecedentes patologicos personales de\ndiabetes\ne10 (diabetes mellitus insulinodependiente)\ne11 (diabetes mellitus no insulinodependiente)\n\nsi (1)\nno (0)": {
+      "new_name": "personal_history_diabetes",
+      "type": "categorical",
+      "categories": {
+        "0": "no",
+        "1": "si (E10/E11)"
+      }
+    },
+    "antecedentes de\nobesidad (e66)\n\nsi (1)\nno (0)": {
+      "new_name": "personal_history_obesity",
+      "type": "categorical",
+      "categories": {
+        "0": "no",
+        "1": "si (E66)"
+      }
+    },
+    "antecedentes patologicos personales de\ndislipidemias\n(e785) hiperlipidemia no especificada\ne780 (hipercolesterolemia pura)\ne781 (hipergliceridemia pura)\ne782 (hiperlipidemia mixta)\n\nsi (1)\nno (0)": {
+      "new_name": "personal_history_dyslipidemia",
+      "type": "categorical",
+      "categories": {
+        "0": "no",
+        "1": "si (E785/E780/E781/E782)"
+      }
+    },
+    "antecedentes patologicos personales de\nhipertensión arterial (i10)\n\nno (0)\nsi (1)": {
+      "new_name": "personal_history_hypertension",
+      "type": "categorical",
+      "categories": {
+        "0": "no",
+        "1": "si (I10)"
+      }
+    },
+    "antecedentes patologicos personales de\ninfarto agudo de miocardio (i21)\no accidente cerebrovascular (i64)\n\nsi (1)\nno (0)": {
+      "new_name": "personal_history_cardiac_cerebrovascular",
+      "type": "categorical",
+      "categories": {
+        "0": "no",
+        "1": "si (I21/I64)"
+      }
+    },
+    "antecedentes de\ninsuficiencia renal cronica (n188)\n1. si\n0. no\n": {
+      "new_name": "personal_history_chronic_kidney_disease",
+      "type": "categorical",
+      "categories": {
+        "0": "no",
+        "1": "si (N188)"
+      }
+    },
+    "antecedentes patologicos personales de\ncancer \n(usar cie10)\n\nsi (1)\nno (0)": {
+      "new_name": "personal_history_cancer",
+      "type": "categorical",
+      "categories": {
+        "0": "no",
+        "1": "si"
+      }
+    },
+    "otros\nantecedentes personales\n\nsi (1)\nno (0)": {
+      "new_name": "other_personal_history",
+      "type": "categorical",
+      "categories": {
+        "0": "no",
+        "1": "si"
+      }
+    },
+    "diagnostico inicial\n(favor usar cie10)\n": {
+      "new_name": "initial_diagnosis_cie10",
+      "type": "string",
+      "categories": null
+    },
+    "tsh\npatologico\n(< 0,4 o > 4,4)": {
+      "new_name": "tsh_pathological",
+      "type": "categorical",
+      "categories": {
+        "normal": "0.4-4.4",
+        "pathological": "<0.4 o >4.4"
+      }
+    },
+    "glucosa basal\nnormal\n<100\nprediabettes\n100 - 125 mg/dl\ndiabetes\n>125 mg/dl\n< 100mg (0)\n> 100mg (1)": {
+      "new_name": "fasting_glucose",
+      "type": "categorical",
+      "categories": {
+        "0": "normal (<100 mg/dl)",
+        "1": "elevated (≥100 mg/dl - prediabetes/diabetes)"
+      }
+    },
+    "glucosa postprandial\nnormal\n<140 mg/dl\nprediabetes\n140 - 199 mg/dl\ndiabetes\n>=200 mg/dl": {
+      "new_name": "postprandial_glucose",
+      "type": "categorical",
+      "categories": {
+        "normal": "<140 mg/dl",
+        "prediabetes": "140-199 mg/dl",
+        "diabetes": "≥200 mg/dl"
+      }
+    },
+    "hba1c \nnormal \n>5.7 %\nprediabetes\n5,7-6,4%\ndiabetes \n>6.4 %\n\nsi (1)\nno (0)": {
+      "new_name": "hba1c_elevated",
+      "type": "categorical",
+      "categories": {
+        "0": "normal (≤5.7%)",
+        "1": "elevated (>5.7% - prediabetes/diabetes)"
+      }
+    },
+    "insulina\n2.2 - 25": {
+      "new_name": "insulin_level",
+      "type": "numeric",
+      "categories": {
+        "normal_range": "2.2-25"
+      }
+    },
+    "trigliceridos patologico\n(>150mg) o \nen tratamiento": {
+      "new_name": "triglycerides_pathological",
+      "type": "categorical",
+      "categories": {
+        "normal": "≤150 mg/dl",
+        "pathological": ">150 mg/dl o en tratamiento"
+      }
+    },
+    "colesterol hdl: patologico\nhombres < 40mg/dl\nmujeres < 50mg/dl ": {
+      "new_name": "hdl_cholesterol_pathological",
+      "type": "categorical",
+      "categories": {
+        "normal": "H:≥40mg/dl, M:≥50mg/dl",
+        "pathological": "H:<40mg/dl, M:<50mg/dl"
+      }
+    },
+    "colesterol total\npatologico\n> 200": {
+      "new_name": "total_cholesterol_pathological",
+      "type": "categorical",
+      "categories": {
+        "normal": "≤200 mg/dl",
+        "pathological": ">200 mg/dl"
+      }
+    },
+    "colesterol ldl:\n> 190 patológico": {
+      "new_name": "ldl_cholesterol_pathological",
+      "type": "categorical",
+      "categories": {
+        "normal": "≤190 mg/dl",
+        "pathological": ">190 mg/dl"
+      }
+    },
+    "creatinina serica": {
+      "new_name": "serum_creatinine",
+      "type": "numeric",
+      "categories": null
+    },
+    "tasa de filtracion gomerular (tfg)\nfórmula:\nm: (140-edad años) * peso kg/creatinina serica * 72\nf: (140-edad años) * peso kg/creatinina serica * 72) * 0,85\n\npatologico \n< 90 ": {
+      "new_name": "glomerular_filtration_rate",
+      "type": "categorical",
+      "categories": {
+        "normal": "≥90",
+        "pathological": "<90"
+      }
+    },
+    "microalbuminuria\na1: < 30mg/dl (tirilla negativo) \na2: 30 - 299 mg/dl (tirilla +)\na3: > 300mg/dl (tirilla >= 1+)": {
+      "new_name": "microalbuminuria_category",
+      "type": "categorical",
+      "categories": {
+        "A1": "<30 mg/dl (tirilla negativo)",
+        "A2": "30-299 mg/dl (tirilla +)",
+        "A3": ">300 mg/dl (tirilla ≥1+)"
+      }
+    },
+    "tfg\ng1: >=90\ng2: 60 - 89\ng3a: 45 - 59\ng3b: 30 - 44\ng4: 15 - 29\ng5: < 15": {
+      "new_name": "gfr_category",
+      "type": "categorical",
+      "categories": {
+        "G1": "≥90",
+        "G2": "60-89",
+        "G3a": "45-59",
+        "G3b": "30-44",
+        "G4": "15-29",
+        "G5": "<15"
+      }
+    },
+    "relacion tfg/proteinuria": {
+      "new_name": "gfr_proteinuria_relationship",
+      "type": "string",
+      "categories": null
+    },
+    "diagnostico  \nprediabetes (r73)\nglicemia basal:\n 100-125 mg/dl\ntolerancia a la glucosa:\n140 - 199mg/dl\nhba1c \n5,7-6,4%\nsi (1)\nno (0)": {
+      "new_name": "prediabetes_diagnosis",
+      "type": "categorical",
+      "categories": {
+        "0": "no",
+        "1": "si (R73)"
+      }
+    },
+    "riesgo de diabetes a 10 años \nescala de findrisk\n\nfórmula riesgo:\nbajo: < 7 puntos (1%)\nligeramente elevado: 7 - 11 puntos (4%)\nmoderado: 12 - 14 puntos (16,66%)\nalto: 15 - 20 puntos (33%)\nmuy alto > 20 puntos (50%)": {
+      "new_name": "diabetes_risk_10_years_findrisk",
+      "type": "categorical",
+      "categories": {
+        "bajo": "<7 puntos (1%)",
+        "ligeramente_elevado": "7-11 puntos (4%)",
+        "moderado": "12-14 puntos (16.66%)",
+        "alto": "15-20 puntos (33%)",
+        "muy_alto": ">20 puntos (50%)"
+      }
+    },
+    "paciente con \nsindrome metabolico \nsi (1)\nno (0)": {
+      "new_name": "metabolic_syndrome",
+      "type": "categorical",
+      "categories": {
+        "0": "no",
+        "1": "si"
+      }
+    },
+    "riesgo cardiovascular: score\nbajo: < 3%\nmoderado 3-4%\nalto: 4-9%\nmuy alto >= 10%": {
+      "new_name": "cardiovascular_risk_score",
+      "type": "categorical",
+      "categories": {
+        "bajo": "<3%",
+        "moderado": "3-4%",
+        "alto": "4-9%",
+        "muy_alto": "≥10%"
+      }
+    },
+    "riesgo cardiovascular: score2-op\n< 50 años (\"aj\"):\nbajo: < 2,5%\nmoderado 2,5 - < 7,5%\nalto: >= 7,5%\n50 - 69 años (\"a\"):\nbajo: < 5%\nmoderado 5 - < 10%\nalto: >= 10%\n>= 70 años (\"am\"):\nbajo: < 7,5%\nmoderado 7,5 - < 15%\nalto: >= 15%": {
+      "new_name": "cardiovascular_risk_score2_op",
+      "type": "categorical",
+      "categories": {
+        "bajo_aj": "<2.5% (<50 años)",
+        "moderado_aj": "2.5-7.5% (<50 años)",
+        "alto_aj": "≥7.5% (<50 años)",
+        "bajo_a": "<5% (50-69 años)",
+        "moderado_a": "5-10% (50-69 años)",
+        "alto_a": "≥10% (50-69 años)",
+        "bajo_am": "<7.5% (≥70 años)",
+        "moderado_am": "7.5-15% (≥70 años)",
+        "alto_am": "≥15% (≥70 años)"
+      }
+    },
+    "escala globorisk (ecuador)\nbajo: < 5% (0)\nmoderado 5 - 9% (1)\nalto 10 - 19% (2)\nmuy alto > 20% (3)": {
+      "new_name": "globorisk_ecuador",
+      "type": "categorical",
+      "categories": {
+        "0": "bajo (<5%)",
+        "1": "moderado (5-9%)",
+        "2": "alto (10-19%)",
+        "3": "muy alto (>20%)"
+      }
+    },
+    "diagnostico hipotiroidismo\nantecedente o\ntsh > 4,4 mg/dl)\n\nsi (1)\nno (0)": {
+      "new_name": "hypothyroidism_diagnosis",
+      "type": "categorical",
+      "categories": {
+        "0": "no",
+        "1": "si (antecedente o TSH >4.4)"
+      }
+    },
+    "diagnostico \ndiabetes mellitus\nantecedente o\nglicemia > 125 mg/dl\n\nsi (5)\nno (0)": {
+      "new_name": "diabetes_mellitus_diagnosis",
+      "type": "categorical",
+      "categories": {
+        "0": "no",
+        "5": "si (antecedente o glicemia >125)"
+      }
+    },
+    "diagnostico\nobesidad (e66)\n(imc > 30)\n\nsi (1)\nno (0)": {
+      "new_name": "obesity_diagnosis",
+      "type": "categorical",
+      "categories": {
+        "0": "no",
+        "1": "si (IMC >30, E66)"
+      }
+    },
+    "diagnostico \ndislipidemia\n(cualquiera de los siguientes)\ntgc: > 150 mg/dl\nhdlc: < 40 mg/dl (h)\n          < 50 mg/dl (m)\ncolesterol > 200\nldlc: > 190 mg/dl\n\nsi (1)\nno (0)": {
+      "new_name": "dyslipidemia_diagnosis",
+      "type": "categorical",
+      "categories": {
+        "0": "no",
+        "1": "si (TGC>150, HDLC<40/50, Col>200, LDLC>190)"
+      }
+    },
+    "diagnostico  hipertension arterial (i10)\nantecedente\no\nta: >139/>89 mmhg)\n\nsi (2)\nno (0)": {
+      "new_name": "hypertension_diagnosis",
+      "type": "categorical",
+      "categories": {
+        "0": "no",
+        "2": "si (antecedente o TA >139/89, I10)"
+      }
+    },
+    "diagnostico enfermedad renal cronica \ng5a1,g5a2,g5a3 \n\nsi (1)\nno (0)": {
+      "new_name": "chronic_kidney_disease_diagnosis",
+      "type": "categorical",
+      "categories": {
+        "0": "no",
+        "1": "si (G5A1, G5A2, G5A3)"
+      }
+    },
+    "tratamiento hipotiroidismo\ntsh > 10\n1.6-1.8 mcg/kg/día\ntsh < 10\n1.1–1.2mcg/kg/día": {
+      "new_name": "hypothyroidism_treatment",
+      "type": "string",
+      "categories": {
+        "tsh_high": "TSH >10: 1.6-1.8 mcg/kg/día",
+        "tsh_moderate": "TSH <10: 1.1-1.2 mcg/kg/día"
+      }
+    },
+    "tratamiento diabetes": {
+      "new_name": "diabetes_treatment",
+      "type": "string",
+      "categories": null
+    },
+    "manejo de \nobesidad y sobrepeso": {
+      "new_name": "obesity_overweight_management",
+      "type": "string",
+      "categories": null
+    },
+    "tratamiento\n dislipidemias": {
+      "new_name": "dyslipidemia_treatment",
+      "type": "string",
+      "categories": null
+    },
+    "tramiento \nhipertension arterial": {
+      "new_name": "hypertension_treatment",
+      "type": "string",
+      "categories": null
+    },
+    "manejo\nfalla renal cronica\n(creatinina serica)\n(microalbuminuria)": {
+      "new_name": "chronic_kidney_failure_management",
+      "type": "string",
+      "categories": null
+    }
+  },
+  "metadata": {
+    "total_columns": 68,
+    "categorical_columns": 47,
+    "numeric_columns": 6,
+    "string_columns": 15,
+    "creation_date": "2025-06-10",
+    "description": "Medical database column mappings with cleaned names and extracted categories for better data processing"
+  }
+}
