@@ -1,0 +1,95 @@
+===== Scenario: FULL FEATURES =====
+Searching LinearRegression ...
+Searching Ridge ...
+Searching Lasso ...
+Searching RandomForest ...
+Searching XGBRegressor ...
+Searching MLPRegressor ...
+              Model   R2_test  R2_train       MAE      RMSE
+4      XGBRegressor  0.971945  0.999997  0.002569  0.001442
+3      RandomForest  0.970727  0.999595  0.001925  0.001505
+5      MLPRegressor  0.908626  0.991894  0.043245  0.004698
+0  LinearRegression  0.891572  0.921716  0.041084  0.005575
+1             Ridge  0.890782  0.921178  0.041494  0.005615
+2             Lasso  0.074454  0.078766  0.198899  0.047586
+
+Best model:
+Model                                              XGBRegressor
+R2_test                                                0.971945
+R2_train                                               0.999997
+MAE                                                    0.002569
+RMSE                                                   0.001442
+BestParams    {'colsample_bytree': 0.9879639408647978, 'lear...
+
+===== Scenario: WITHOUT microalbuminuria_category =====
+Searching LinearRegression ...
+Searching Ridge ...
+Searching Lasso ...
+Searching RandomForest ...
+Searching XGBRegressor ...
+Searching MLPRegressor ...
+              Model   R2_test  R2_train       MAE      RMSE
+4      XGBRegressor  0.994912  0.999958  0.002868  0.000262
+3      RandomForest  0.981845  0.995448  0.003934  0.000933
+5      MLPRegressor  0.627255  0.986519  0.083755  0.019164
+1             Ridge  0.579245  0.636047  0.107003  0.021633
+0  LinearRegression  0.569226  0.637708  0.106480  0.022148
+2             Lasso -0.001738  0.000000  0.207379  0.051504
+
+Best model:
+Model                                              XGBRegressor
+R2_test                                                0.994912
+R2_train                                               0.999958
+MAE                                                    0.002868
+RMSE                                                   0.000262
+BestParams    {'colsample_bytree': 0.9400154311159197, 'lear...
+
+No features >= 0.97 correlation with target after dummies.
+===== Scenario: FULL FEATURES =====
+Searching LinearRegression ...
+Searching Ridge ...
+Searching Lasso ...
+Searching RandomForest ...
+Searching XGBRegressor ...
+Searching MLPRegressor ...
+              Model   R2_test  R2_train       MAE      RMSE
+4      XGBRegressor  0.971945  0.999997  0.002569  0.001442
+3      RandomForest  0.970727  0.999595  0.001925  0.001505
+5      MLPRegressor  0.908626  0.991894  0.043245  0.004698
+0  LinearRegression  0.891572  0.921716  0.041084  0.005575
+1             Ridge  0.890782  0.921178  0.041494  0.005615
+2             Lasso  0.074454  0.078766  0.198899  0.047586
+
+Best model:
+Model                                              XGBRegressor
+R2_test                                                0.971945
+R2_train                                               0.999997
+MAE                                                    0.002569
+RMSE                                                   0.001442
+BestParams    {'colsample_bytree': 0.9879639408647978, 'lear...
+
+===== Scenario: WITHOUT microalbuminuria_category =====
+Searching LinearRegression ...
+Searching Ridge ...
+Searching Lasso ...
+Searching RandomForest ...
+Searching XGBRegressor ...
+Searching MLPRegressor ...
+              Model   R2_test  R2_train       MAE      RMSE
+4      XGBRegressor  0.994912  0.999958  0.002868  0.000262
+3      RandomForest  0.981845  0.995448  0.003934  0.000933
+5      MLPRegressor  0.627255  0.986519  0.083755  0.019164
+1             Ridge  0.579245  0.636047  0.107003  0.021633
+0  LinearRegression  0.569226  0.637708  0.106480  0.022148
+2             Lasso -0.001738  0.000000  0.207379  0.051504
+
+Best model:
+Model                                              XGBRegressor
+R2_test                                                0.994912
+R2_train                                               0.999958
+MAE                                                    0.002868
+RMSE                                                   0.000262
+BestParams    {'colsample_bytree': 0.9400154311159197, 'lear...
+
+No features >= 0.97 correlation with target after dummies.
+
