@@ -1,0 +1,90 @@
+{
+  "best_model": "XGBRegressor",
+  "results": [
+    {
+      "model": "LinearRegression",
+      "r2_test": 0.2095514622641299,
+      "r2_train": 0.27847338269426025,
+      "mae": 0.45745605940362283,
+      "rmse": 0.6208587963017598,
+      "best_params": {
+        "model__fit_intercept": true
+      }
+    },
+    {
+      "model": "Ridge",
+      "r2_test": 0.20935307878248333,
+      "r2_train": 0.2780068195839899,
+      "mae": 0.4574378144528662,
+      "rmse": 0.6209367016913299,
+      "best_params": {
+        "model__alpha": 96.99108521619944
+      }
+    },
+    {
+      "model": "Lasso",
+      "r2_test": 0.03341397723296691,
+      "r2_train": 0.041528491021746716,
+      "mae": 0.5703909799654223,
+      "rmse": 0.6865565166893509,
+      "best_params": {
+        "model__alpha": 0.20594494295802446
+      }
+    },
+    {
+      "model": "RandomForest",
+      "r2_test": 0.2952101962142911,
+      "r2_train": 0.691278014142489,
+      "mae": 0.38773931946205653,
+      "rmse": 0.5862540347018023,
+      "best_params": {
+        "model__max_depth": 11,
+        "model__max_features": 0.5,
+        "model__min_samples_leaf": 3,
+        "model__min_samples_split": 8,
+        "model__n_estimators": 440
+      }
+    },
+    {
+      "model": "XGBRegressor",
+      "r2_test": 0.2985214591026306,
+      "r2_train": 0.7989746332168579,
+      "mae": 0.3920832872390747,
+      "rmse": 0.5848752119777725,
+      "best_params": {
+        "model__colsample_bytree": 0.679486272613669,
+        "model__learning_rate": 0.011601413965844696,
+        "model__max_depth": 5,
+        "model__min_child_weight": 3,
+        "model__n_estimators": 892,
+        "model__subsample": 0.88453678109946
+      }
+    },
+    {
+      "model": "MLPRegressor",
+      "r2_test": -0.032504085007836414,
+      "r2_train": 0.964315703923352,
+      "mae": 0.45458345940447237,
+      "rmse": 0.7095809175079864,
+      "best_params": {
+        "model__activation": "relu",
+        "model__alpha": 0.007966429868602328,
+        "model__hidden_layer_sizes": [
+          128,
+          64
+        ],
+        "model__learning_rate_init": 0.007419939418114052
+      }
+    }
+  ],
+  "r2_best": 0.2985214591026306,
+  "class_counts": {
+    "0": 1425,
+    "1": 542,
+    "2": 154,
+    "3": 35,
+    "4": 1
+  },
+  "train_size": 1725,
+  "test_size": 432
+}
